@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+.container{
+    width: 980px;
+    background: #000;
+    color: #fff;
+    display: block;
+    height: 700px;
+    box-sizing: border-box;
+    padding: 100px;
+}
+.container .ele-wrap .menu{
+    position: relative;
+    width: 200px;
+}
+.container .ele-wrap .menu ul li{
+    list-style: none;
+    position: relative;
+}
+.container .ele-wrap .menu ul li a{
+    display: block;
+    transition: padding .3s ease-in-out;
+    color: #fff;
+    padding: 10px;
+    padding-right: 50px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    min-width: 100%;
+    text-decoration: none;
+    font-size: 20px;
+    z-index: 20;
+    position: relative;
+}
+
+.container .ele-wrap .menu ul li a::before{
+    content: "";
+    width: 1.5%;
+    height: 100%;
+    background: green;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: .3s ease-in-out;
+}
+.container .ele-wrap .menu ul li a:hover::before{
+    width: 100%;
+}
+.container .ele-wrap .menu ul li a:hover{
+    padding-left: 15px;
+}
